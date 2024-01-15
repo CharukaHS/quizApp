@@ -1,7 +1,7 @@
 const form = document.querySelector('.quiz-form');
 const submitBtn = document.querySelector('.btn');
 const correctAnswers = ['q1-1', 'q2-2', 'q3-2', 'q4-1'];
-const displayPts = document.getElementById('displayPts');
+const displayPts = document.getElementById('ptsId');
   
 submitBtn.addEventListener ('click', (e) => {
     e.preventDefault();
@@ -17,5 +17,5 @@ submitBtn.addEventListener ('click', (e) => {
 
         }
     })
-    console.log(score);
+    displayPts.innerHTML = `Correct Answers : ${score}/4`
 });
